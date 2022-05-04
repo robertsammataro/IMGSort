@@ -1,3 +1,5 @@
+using Newtonsoft.Json;
+
 namespace IMGSort
 {
     public partial class MainWindow : Form
@@ -217,15 +219,35 @@ namespace IMGSort
         //Take in an input string with every tag and return a List with each unique tag
         private List<string> GetUniqueTags(string user_input)
         {
+            //Generate a Dictionary with string keys and string[] values that correspond with the different
+            //shortcuts defined in supertag.json
+            string jsonData = File.ReadAllText("supertag.json");
+            Dictionary<string, string[]> supertagDict = JsonConvert.DeserializeObject<Dictionary<string, string[]>>(jsonData);
+
             //This forces all tags to be used in all lower_case, so if a user put in Test_Folder as a tag,
             //the file would be sent to .../test_folder/... rather than .../Test_Folder/...
-
             user_input = user_input.ToLower();
             string[] tag_array = user_input.Split(',');
-
+            List<string> untrimmed_tags = new List<string>();
             List<string> tag_list = new List<string>();
 
-            foreach(string tag in tag_array)
+
+
+            foreach (string tag in tag_array)
+            {
+                untrimmed_tags.Add(tag);
+
+                if (supertagDict.ContainsKey(tag))
+                {
+                    foreach(string item in supertagDict[tag])
+                    {
+                        untrimmed_tags.Add(item);
+                    }
+                }
+
+            }
+
+            foreach(string tag in untrimmed_tags)
             {
                 string trimmed_tag = tag.Trim();
 
