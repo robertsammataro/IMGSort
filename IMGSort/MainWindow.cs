@@ -171,28 +171,28 @@ namespace IMGSort
 
         private string GetFileExtension(string input)
         {
-            if (input.EndsWith(".png"))
+            if (input.ToLower().EndsWith(".png"))
                 return (".png");
 
-            else if (input.EndsWith(".jpg"))
+            else if (input.ToLower().EndsWith(".jpg"))
                 return (".jpg");
 
-            else if (input.EndsWith(".jpeg"))
+            else if (input.ToLower().EndsWith(".jpeg"))
                 return (".jpeg");
 
-            else if (input.EndsWith(".gif"))
+            else if (input.ToLower().EndsWith(".gif"))
                 return (".gif");
 
-            else if (input.EndsWith(".bmp"))
+            else if (input.ToLower().EndsWith(".bmp"))
                 return (".bmp");
 
-            else if (input.EndsWith(".mp4"))
+            else if (input.ToLower().EndsWith(".mp4"))
                 return (".mp4");
 
-            else if (input.EndsWith(".webm"))
+            else if (input.ToLower().EndsWith(".webm"))
                 return (".webm");
 
-            else if (input.EndsWith(".avi"))
+            else if (input.ToLower().EndsWith(".avi"))
                 return (".avi");
 
             else
