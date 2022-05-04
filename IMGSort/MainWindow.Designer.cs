@@ -39,6 +39,9 @@
             this.RunBox = new System.Windows.Forms.Button();
             this.DeleteOriginalBox = new System.Windows.Forms.CheckBox();
             this.FileFormatBox = new System.Windows.Forms.GroupBox();
+            this.aviButton = new System.Windows.Forms.CheckBox();
+            this.webmButton = new System.Windows.Forms.CheckBox();
+            this.mp4Button = new System.Windows.Forms.CheckBox();
             this.jpgButton = new System.Windows.Forms.CheckBox();
             this.gifButton = new System.Windows.Forms.CheckBox();
             this.bmpButton = new System.Windows.Forms.CheckBox();
@@ -52,9 +55,6 @@
             this.InputPathBox = new System.Windows.Forms.TextBox();
             this.LogoBox = new System.Windows.Forms.PictureBox();
             this.VersionBox = new System.Windows.Forms.Label();
-            this.mp4Button = new System.Windows.Forms.CheckBox();
-            this.webmButton = new System.Windows.Forms.CheckBox();
-            this.aviButton = new System.Windows.Forms.CheckBox();
             ((System.ComponentModel.ISupportInitialize)(this.PictureViewer)).BeginInit();
             this.FileFormatBox.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.LogoBox)).BeginInit();
@@ -163,6 +163,36 @@
             this.FileFormatBox.TabIndex = 24;
             this.FileFormatBox.TabStop = false;
             this.FileFormatBox.Text = "Included File Formats";
+            // 
+            // aviButton
+            // 
+            this.aviButton.AutoSize = true;
+            this.aviButton.Location = new System.Drawing.Point(526, 25);
+            this.aviButton.Name = "aviButton";
+            this.aviButton.Size = new System.Drawing.Size(44, 19);
+            this.aviButton.TabIndex = 15;
+            this.aviButton.Text = ".avi";
+            this.aviButton.UseVisualStyleBackColor = true;
+            // 
+            // webmButton
+            // 
+            this.webmButton.AutoSize = true;
+            this.webmButton.Location = new System.Drawing.Point(447, 25);
+            this.webmButton.Name = "webmButton";
+            this.webmButton.Size = new System.Drawing.Size(62, 19);
+            this.webmButton.TabIndex = 14;
+            this.webmButton.Text = ".webm";
+            this.webmButton.UseVisualStyleBackColor = true;
+            // 
+            // mp4Button
+            // 
+            this.mp4Button.AutoSize = true;
+            this.mp4Button.Location = new System.Drawing.Point(374, 25);
+            this.mp4Button.Name = "mp4Button";
+            this.mp4Button.Size = new System.Drawing.Size(53, 19);
+            this.mp4Button.TabIndex = 13;
+            this.mp4Button.Text = ".mp4";
+            this.mp4Button.UseVisualStyleBackColor = true;
             // 
             // jpgButton
             // 
@@ -287,41 +317,11 @@
             this.VersionBox.AutoSize = true;
             this.VersionBox.Location = new System.Drawing.Point(7, 360);
             this.VersionBox.Name = "VersionBox";
-            this.VersionBox.Size = new System.Drawing.Size(79, 15);
+            this.VersionBox.Size = new System.Drawing.Size(72, 15);
             this.VersionBox.TabIndex = 34;
-            this.VersionBox.Text = "Version 1.0.2b";
+            this.VersionBox.Text = "Version 1.1.2";
             // 
-            // mp4Button
-            // 
-            this.mp4Button.AutoSize = true;
-            this.mp4Button.Location = new System.Drawing.Point(374, 25);
-            this.mp4Button.Name = "mp4Button";
-            this.mp4Button.Size = new System.Drawing.Size(53, 19);
-            this.mp4Button.TabIndex = 13;
-            this.mp4Button.Text = ".mp4";
-            this.mp4Button.UseVisualStyleBackColor = true;
-            // 
-            // webmButton
-            // 
-            this.webmButton.AutoSize = true;
-            this.webmButton.Location = new System.Drawing.Point(447, 25);
-            this.webmButton.Name = "webmButton";
-            this.webmButton.Size = new System.Drawing.Size(62, 19);
-            this.webmButton.TabIndex = 14;
-            this.webmButton.Text = ".webm";
-            this.webmButton.UseVisualStyleBackColor = true;
-            // 
-            // aviButton
-            // 
-            this.aviButton.AutoSize = true;
-            this.aviButton.Location = new System.Drawing.Point(526, 25);
-            this.aviButton.Name = "aviButton";
-            this.aviButton.Size = new System.Drawing.Size(44, 19);
-            this.aviButton.TabIndex = 15;
-            this.aviButton.Text = ".avi";
-            this.aviButton.UseVisualStyleBackColor = true;
-            // 
-            // Form1
+            // MainWindow
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
@@ -345,7 +345,7 @@
             this.Controls.Add(this.ImageCountBox);
             this.Controls.Add(this.FileNameBox);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
-            this.Name = "Form1";
+            this.Name = "MainWindow";
             this.Text = "IMGSort";
             ((System.ComponentModel.ISupportInitialize)(this.PictureViewer)).EndInit();
             this.FileFormatBox.ResumeLayout(false);
