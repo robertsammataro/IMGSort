@@ -136,8 +136,6 @@ namespace IMGSort
             if(filename.EndsWith(".mp4") || filename.EndsWith(".webm") || filename.EndsWith(".avi"))
             {
 
-                MessageBox.Show(filename);
-
                 if (File.Exists(OutputPathBox.Text + "\\__THUMB__.jpg"))
                     File.Delete(OutputPathBox.Text + "\\__THUMB__.jpg");
 
