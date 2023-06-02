@@ -10,7 +10,7 @@ namespace IMGSort
         private int total_size;
         private int current_count = 1;
 
-        
+
         public MainWindow()
         {
             InitializeComponent();
@@ -133,7 +133,7 @@ namespace IMGSort
                 PictureViewer.Image.Dispose();
             }
 
-            if(filename.EndsWith(".mp4") || filename.EndsWith(".webm") || filename.EndsWith(".avi"))
+            if (filename.EndsWith(".mp4") || filename.EndsWith(".webm") || filename.EndsWith(".avi"))
             {
 
                 if (File.Exists(OutputPathBox.Text + "\\__THUMB__.jpg"))
@@ -151,7 +151,7 @@ namespace IMGSort
 
         }
 
-        
+
         private void ClearDisplay()
         {
             VersionBox.Visible = false;
@@ -237,7 +237,7 @@ namespace IMGSort
 
                 if (supertagDict.ContainsKey(tag))
                 {
-                    foreach(string item in supertagDict[tag])
+                    foreach (string item in supertagDict[tag])
                     {
                         untrimmed_tags.Add(item);
                     }
@@ -245,7 +245,7 @@ namespace IMGSort
 
             }
 
-            foreach(string tag in untrimmed_tags)
+            foreach (string tag in untrimmed_tags)
             {
                 string trimmed_tag = tag.Trim();
 
@@ -310,10 +310,15 @@ namespace IMGSort
                 p.StartInfo.CreateNoWindow = true;
                 p.StartInfo.RedirectStandardOutput = true;
                 p.StartInfo.FileName = Directory.GetCurrentDirectory() + "\\ffmpeg\\bin\\ffmpeg.exe";
-                p.StartInfo.Arguments = "-i \""+input_file_path+"\" -ss 00:00:01.000 -vframes 1 \""+output_directory+"\\__THUMB__.jpg\"";
+                p.StartInfo.Arguments = "-i \"" + input_file_path + "\" -ss 00:00:01.000 -vframes 1 \"" + output_directory + "\\__THUMB__.jpg\"";
                 p.Start();
                 p.WaitForExit(); //Wait for ffmpeg to finish before continuing
             }
+        }
+
+        private void VersionBox_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }
